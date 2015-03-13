@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class Animal {
@@ -36,7 +35,7 @@ public class Animal {
     }
 
     this.setFavoriteChar();
-    this.setUniqueID
+    this.setUniqueID();
 
   }
 
@@ -83,14 +82,14 @@ public class Animal {
   public void setUniqueID(byte uniqueID) {
     // in parenthesis, String is telling that the name variable is going to be a string
     this.uniqueID = uniqueID;
-    System.out.println("Unique ID is set to: " + this.uniqueID)
+    System.out.println("Unique ID is set to: " + this.uniqueID);
   }
 
   public void setUniqueID() {
     long minNumber = 1;
     long maxNumber = 1000000;
 
-    this.uniqueID = minNumber + (long) (Math.random() * ((maxNumber - minNumber)) + 1)
+    this.uniqueID = minNumber + (long) (Math.random() * ((maxNumber - minNumber)) + 1);
   }
 
   public char favoriteChar() {
@@ -99,6 +98,16 @@ public class Animal {
 
   public void setFavoriteChar(char favoriteChar) {
     this.favoriteChar = favoriteChar;
+  }
+
+  public void setFavoriteChar() {
+    int randomNumber = (int) (Math.random() * 126) + 1;
+
+    this.favoriteChar = (char) randomNumber;
+
+    if (randomNumber == 32) {
+      System.out.println("Favorite character set to space");
+    }
   }
 
   public double getSpeed() {
