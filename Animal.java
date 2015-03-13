@@ -20,7 +20,7 @@ public class Animal {
   static Scanner userInput = new Scanner(System.in);
   // Scanner is a Java util library that allows you to take in user input from command line... sucks it doesnt have Ruby's #gets!
 
-  public Animal () {
+  public Animal () { // this is the constructor
     numberOfAnimals++;
 
     int sumOfNumbers = 5 + 1;
@@ -53,7 +53,6 @@ public class Animal {
   }
 
   public void setWeight(int weight) {
-    // in parenthesis, String is telling that the name variable is going to be a string
     this.weight = weight;
   }
 
@@ -62,7 +61,6 @@ public class Animal {
   }
 
   public void setHasOwner(boolean hasOwner) {
-    // in parenthesis, String is telling that the name variable is going to be a string
     this.name = name;
   }
 
@@ -71,7 +69,6 @@ public class Animal {
   }
 
   public void setAge(byte age) {
-    // in parenthesis, String is telling that the name variable is going to be a string
     this.age = age;
   }
 
@@ -79,8 +76,7 @@ public class Animal {
     return uniqueID;
   }
 
-  public void setUniqueID(byte uniqueID) {
-    // in parenthesis, String is telling that the name variable is going to be a string
+  public void setUniqueID(long uniqueID) {
     this.uniqueID = uniqueID;
     System.out.println("Unique ID is set to: " + this.uniqueID);
   }
@@ -127,8 +123,8 @@ public class Animal {
   }
 
   public static void main(String[] args) {
-    // this is the constructor!
-    Animal theAnimal = new Animal();
+    // this is the 'main' method that is executed when program is run
+    Animal theAnimal = new Animal(); // create new instance of Animal class
 
   }
 
